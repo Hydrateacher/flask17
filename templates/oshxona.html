@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Oshxona</title>
+</head>
+<body>
+    <h1>Buyurtma bering</h1>
+
+    <h5>Menyuda quyidagilar bor:osh,qazonkabob,shashlik,norin,somsa</h5>
+
+    <form method="post">
+        <label for="taom">Taom nomini kiriting</label>
+        <input type="text" id="taom" class="taom" name="taom" required>
+
+        
+        <input type="submit" value="Buyurtma berish">
+    </form>
+    <br><br><br>
+
+    {% if error %}
+        <p> {{ error }}</p>
+    {% endif %}
+
+    {% if taom %}
+        <p> {{ taom }} uchun buyurtma qabul qilindi</p>
+    {% endif %}    
+</body>
+</html>

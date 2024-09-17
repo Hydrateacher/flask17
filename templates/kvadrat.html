@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Kvadrat</title>
+</head>
+<body>
+    <h1>Raqamni kiriting</h1>
+
+    <form method="post">
+        <label for="son">Sonni kiriting</label>
+        <input type="number" id="son" class="son" name="son" required>
+        <input type="submit" value="Hisoblash">
+    </form>
+    <br><br><br>
+
+    
+
+    {% if kvadrat%}
+        <p>Sonning kvadrati: {{kvadrat}}</p>
+    {% endif %}    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Kvadrat</title>
+</head>
+<body>
+    <h1>Raqamni kiriting</h1>
+
+    <form method="post">
+        <label for="son">Sonni kiriting</label>
+        <input type="number" id="son" class="son" name="son" required>
+        <input type="submit" value="Hisoblash">
+    </form>
+    <br><br><br>
+
+    
+
+    {% if sonlar %}
+    <h2>Sonlarning kvadratlari</h2>
+    <ul>
+        {% for number in sonlar %}
+            <li style="width: 100%; margin-left: 50px;">{{ number }} ning kvadrati {{ number**2 }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}     
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Dam olish</title>
+</head>
+<body>
+    <h1>Dam olgani boramizmi</h1>
+
+    <h5>Agar hafta kuni shanba yoki yakshanba bo`lsa va harorat 31 gradusdan yuqori bo`lsa boramiz!!!</h5>
+
+    <form method="post">
+        <label for="kun">Hafta kunini kiriting</label>
+        <input type="text" id="kun" class="kun" name="kun" required>
+
+        <label for="harorat">Haroratni kiriting</label>
+        <input type="number" id="harorat" class="harorat" name="harorat" required>
+
+        <input type="submit" value="Natija">
+    </form>
+    <br><br><br>
+
+    {% if error %}
+        <p> {{ error }}</p>
+    {% endif %}
+
+    {% if dam %}
+        <p>Dam olishga {{ dam }}</p>
+    {% endif %}    
+</body>
+</html>
